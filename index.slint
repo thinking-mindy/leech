@@ -1,0 +1,26 @@
+
+import { GroupBox,VerticalBox,Button,ProgressIndicator } from "std-widgets.slint";
+
+export component App inherits Window {
+    preferred-width: 500px;
+    preferred-height: 400px;
+    min-height: 400px;
+    min-width: 500px;
+    title: @tr("Leech Worm");
+    icon: @image-url("./leechsm.jpg");
+    default-font-size: 14px;
+    default-font-weight: 700;
+
+    GroupBox {
+        VerticalBox {
+            alignment: center;
+            Text {
+                text: @tr("Leeching....");
+                horizontal-alignment: center;
+            }
+            ProgressIndicator {
+                indeterminate: true;
+            }
+        }
+    }
+}
